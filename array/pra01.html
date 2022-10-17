@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-mode 練習</title>
+    <style>
+        .block{
+            width:100px;
+            height:100px;
+            border-radius:5px;
+            border:1px solid #666;
+            position:relative;
+        }
+
+        .pointer{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            background:black;
+        }
+        .center-center{
+            position:absolute;
+            left:calc((100px - 20px) / 2);
+            top:calc((100px - 20px) / 2);
+        }
+        .top-right{
+            position:absolute;
+            right:5px;
+            top:5px;
+        }
+        .top-center{
+            position:absolute;
+            left:calc((100px - 20px) / 2);
+            top:5px;
+        }
+        .bottom-left{
+            position:absolute;
+            left:5px;
+            bottom:5px;
+        }
+        .bottom-center{
+            position:absolute;
+            left:calc((100px - 20px) / 2);
+            bottom:5px;
+        }
+        .top-left{
+            position:absolute;
+            left:5px;
+            top:5px;
+        }
+        .bottom-right{
+            position:absolute;
+            right:5px;
+            bottom:5px;
+        }
+        .center-left{
+            position:absolute;
+            left:5px;
+            top:calc((100px - 20px) / 2);
+        }
+        .center-right{
+            position:absolute;
+            right:5px;
+            top:calc((100px - 20px) / 2);
+        }
+
+    </style>
+</head>
+<body>
+<h2>練習一</h2>
+<h3>使用CSS繪製骰子一點</h3>
+<div style="display:flex;justify-content: space-evenly;">
+    <div class="block">
+        <div class="pointer center-center"></div>
+    </div>
+    <div class="block">
+        <div class="pointer top-center"></div>
+        <div class="pointer bottom-center"></div>
+    </div>
+    <div class="block">
+        <div class="pointer top-right"></div>
+        <div class="pointer center-center"></div>
+        <div class="pointer bottom-left"></div>
+    </div>
+    <div class="block">
+        <div class="pointer top-right"></div>
+        <div class="pointer top-left"></div>
+        <div class="pointer bottom-right"></div>
+        <div class="pointer bottom-left"></div>
+    </div>
+    <div class="block">
+        <div class="pointer top-right"></div>
+        <div class="pointer top-left"></div>
+        <div class="pointer center-center"></div>
+        <div class="pointer bottom-right"></div>
+        <div class="pointer bottom-left"></div>
+    </div>
+    
+    <div class="block">
+        <div class="pointer top-right"></div>
+        <div class="pointer top-left"></div>
+        <div class="pointer center-left"></div>
+        <div class="pointer center-right"></div>
+        <div class="pointer bottom-left"></div>
+        <div class="pointer bottom-right"></div>
+    </div>
+</div>
+
+<style>
+    .flex{
+        width:100px;
+        height:100px;
+        border-radius:5px;
+        border:1px solid #666;
+        position:relative;
+        display:flex;
+    }
+    .flex.center-center{
+        justify-content: center;
+        align-items: center;
+    }
+    .flex.two-pointer{
+        justify-content: space-evenly;
+        align-items: center;
+        flex-flow: column;
+    }
+    .flex.four-pointer{
+        flex-wrap: wrap;
+    }
+
+    .pointer{
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        background:black;
+    }
+
+    .top-right{
+        position:absolute;
+        right:5px;
+        top:5px;
+    }
+    .top-center{
+        position:absolute;
+        left:calc((100px - 20px) / 2);
+        top:5px;
+    }
+    .bottom-left{
+        position:absolute;
+        left:5px;
+        bottom:5px;
+    }
+    .bottom-center{
+        position:absolute;
+        left:calc((100px - 20px) / 2);
+        bottom:5px;
+    }
+    .top-left{
+        position:absolute;
+        left:5px;
+        top:5px;
+    }
+    .bottom-right{
+        position:absolute;
+        right:5px;
+        bottom:5px;
+    }
+    .center-left{
+        position:absolute;
+        left:5px;
+        top:calc((100px - 20px) / 2);
+    }
+    .center-right{
+        position:absolute;
+        right:5px;
+        top:calc((100px - 20px) / 2);
+    }
+
+</style>
+<div style="display:flex;justify-content: space-evenly;">
+    <div class="flex center-center">
+        <div class="pointer "></div>
+    </div>
+    <div class="flex two-pointer">
+        <div class="pointer"></div>
+        <div class="pointer"></div>
+    </div>
+    <div class="flex">
+        <div class="pointer top-right"></div>
+        <div class="pointer center-center"></div>
+        <div class="pointer bottom-left"></div>
+    </div>
+    <div class="flex four-pointer">
+        <div class="pointer"></div>
+        <div class="pointer"></div>
+        <div class="pointer"></div>
+        <div class="pointer"></div>
+    </div>
+    <div class="flex">
+        <div class="pointer top-right"></div>
+        <div class="pointer top-left"></div>
+        <div class="pointer center-center"></div>
+        <div class="pointer bottom-right"></div>
+        <div class="pointer bottom-left"></div>
+    </div>
+    
+    <div class="flex">
+        <div class="pointer top-right"></div>
+        <div class="pointer top-left"></div>
+        <div class="pointer center-left"></div>
+        <div class="pointer center-right"></div>
+        <div class="pointer bottom-left"></div>
+        <div class="pointer bottom-right"></div>
+    </div>
+</div>
+
+</body>
+</html>
