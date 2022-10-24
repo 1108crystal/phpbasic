@@ -35,6 +35,9 @@ echo date('Y-m-d H:m:s' ,$tomorrow)."<br>";
     <li><a href="date_part02.php">練習二:計算距離自己下一次生日還有幾天</a></li>
     <li><a href="date_part03.php">練習三:利用date()函式的格式化參數，完成以下的日期格式呈現</a></li>
     <li><a href="date_part04.php">練習四:利用迴圈來計算連續五個周一的日期</a></li>
+    <hr>
+    <li><a href="calendar.php">練習五:月曆【10/24】</a></li>
+
 </ul>
 </body>
 </html>
